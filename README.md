@@ -348,7 +348,6 @@ See `inference.ipynb` for more comparison examples and inference code.
   - `checkpoint-500/`, `checkpoint-1000/`, etc. - Intermediate checkpoints
   - `epoch-2/`, `epoch-4/` - Epoch checkpoints
   - `test_0.png`, `test_1.png`, `test_2.png` - Sample generated images
-  - `training_summary.md` - Training statistics and summary
 
 ### Loading Trained Model
 
