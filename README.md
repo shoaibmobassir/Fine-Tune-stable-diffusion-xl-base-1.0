@@ -13,7 +13,7 @@ This repository contains a complete implementation for fine-tuning Stable Diffus
 - [Usage](#usage)
 - [Repository Structure](#repository-structure)
 
-## 🎯 Overview
+##  Overview
 
 The goal of this project is to fine-tune the Stable Diffusion XL base model (`stabilityai/stable-diffusion-xl-base-1.0`) to generate images in the distinct art style of Naruto anime, using the `lambdalabs/naruto-blip-captions` dataset. The entire training and inference process must run within the 16GB VRAM limit of Google Colab's free T4 GPU.
 
@@ -27,7 +27,7 @@ The goal of this project is to fine-tune the Stable Diffusion XL base model (`st
 - **Inference Notebook (Colab)**: [Open in Google Colab](https://colab.research.google.com/drive/1k9ZWlg9CEaNQA9sJj5W9y0VbmImhKaOl?usp=sharing#scrollTo=FECi5EbShpiX)
 - **Model Weights & Outputs (Google Drive)**: [Download from Drive](https://drive.google.com/drive/folders/1wsxr6C6JMRmhtA_PtCKzzb4ypNwYv2H0)
 
-## ⚠️ The Challenge
+##  The Challenge
 
 Stable Diffusion XL is a massive model with approximately **2.6 billion parameters**. A naive fine-tuning approach would require:
 
@@ -37,7 +37,7 @@ Stable Diffusion XL is a massive model with approximately **2.6 billion paramete
 
 **The core challenge**: How do we adapt a 2.6B parameter model to learn a new artistic style within a 16GB VRAM budget?
 
-## 🏗️ High-Level Approach
+##  High-Level Approach
 
 Our solution employs a **multi-layered optimization strategy** that combines parameter-efficient fine-tuning with memory-efficient training techniques:
 
@@ -48,7 +48,7 @@ Our solution employs a **multi-layered optimization strategy** that combines par
 
 This approach reduces memory requirements from ~40GB to ~12-14GB, making training feasible on free-tier Colab.
 
-## 🚀 Memory Optimization Techniques
+##  Memory Optimization Techniques
 
 ### 1. LoRA (Low-Rank Adaptation)
 
@@ -212,7 +212,7 @@ This approach reduces memory requirements from ~40GB to ~12-14GB, making trainin
 
 ---
 
-## 📊 Combined Memory Impact
+##  Combined Memory Impact
 
 | Component | Without Optimizations | With Optimizations | Savings |
 |-----------|----------------------|-------------------|---------|
@@ -285,7 +285,7 @@ class TrainingConfig:
 
 ---
 
-## 📈 Results
+##  Results
 
 ### Training Metrics
 
@@ -318,7 +318,7 @@ See `inference.ipynb` for more comparison examples and inference code.
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 ### Training
 
@@ -386,7 +386,7 @@ listen2ti/
 └── download.png             # Comparison results image
 ```
 
-### 📦 Model Weights & Outputs
+###  Model Weights & Outputs
 
 All trained model weights, checkpoints, and generated images are available on Google Drive:
 
