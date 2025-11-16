@@ -1,0 +1,51 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Model weights (too large for git)
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.bin
+models/
+outputs/
+checkpoints/
+
+# Data
+data/
+*.jpg
+*.png
+*.jpeg
+!download.png  # Keep the comparison image
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
