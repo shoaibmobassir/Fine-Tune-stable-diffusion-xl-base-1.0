@@ -242,10 +242,10 @@ class TrainingConfig:
     resolution = 512  # Reduced from 1024
     
     # Training
-    num_epochs = 10
+    num_epochs = 5
     train_batch_size = 1
-    gradient_accumulation_steps = 4  # Effective batch size = 4
-    learning_rate = 1e-4
+    gradient_accumulation_steps = 4  
+    learning_rate = 1e-5
     mixed_precision = "fp16"
     
     # LoRA
@@ -383,7 +383,7 @@ image.save("output.png")
 listen2ti/
 ├── train.ipynb              # Main training notebook
 ├── inference.ipynb          # Inference and comparison 
-├── README.md                # This file
+├── README.md                
 └── download.png             # Comparison results image
 ```
 
@@ -398,4 +398,3 @@ The Drive folder contains:
 - **`checkpoint-500/`**, **`checkpoint-1000/`**, **`checkpoint-1500/`** - Intermediate training checkpoints
 - **`epoch-2/`**, **`epoch-4/`** - Epoch-based checkpoints
 - **`test_0.png`**, **`test_1.png`**, **`test_2.png`** - Sample generated images from test prompts
-- **`training_summary.md`** - Detailed training statistics and summary
